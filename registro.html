@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Registro</title>
+
+           <script> 
+				function vervalores(){  
+					var sAux=""; 
+					var frm = document.getElementById("registro"); 
+					for (i=1;i<frm.elements.length;i++) 
+					{ 
+						sAux += "NOMBRE: " + frm.elements[i].name + " "; 
+						sAux += "VALOR: " + frm.elements[i].value + "\n"; 
+					} 
+					alert(sAux); 
+				} 
+			</script> 
+	
+    </head>
+    
+    <body>
+    	<h1 align="center"><b>Registro</b></h1>
+        <form id='registro' name='registro' onSubmit='vervalores()'> 
+            <table width="70%" border="3" align="center">
+                <tr>
+                    <td width="49%">Nombre y apellidos(*):</td>
+                    <td width="51%"><input type="text" name="nom"></td>
+                </tr>
+                <tr>
+                    <td>eMail(*):</td>
+                    <td><input type="text" name="mail"></td>
+                </tr>
+                <tr>
+                    <td>Contraseña(*):</td>
+                    <td><input type="password" name="contra"></td>
+                </tr>
+                <tr>
+                    <td>Telefono(*):</td>
+                    <td><input type="text" name="tlf"></td>
+                </tr>
+                <tr>
+                    <td>Especialidad(*):</td>
+                    <td><input type="text" name="espec"></td>
+                </tr>
+                <tr>
+                    <td>Intereses academicos:</td>
+                    <td><input type="text" name="intAc"></td>
+                </tr>
+            </table>
+			<br>
+        	<div align="center"><input type="button" onclick="vervalores()" value="Submit form" align="middle"></div>
+        </form>
+		
+
+    </body>
+</html>
